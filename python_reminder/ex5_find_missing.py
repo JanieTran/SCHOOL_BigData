@@ -11,11 +11,25 @@
 # What is the big O of your code? Can you find an O(logn) algorithm?
 # --------------------------------------------------------------------------
 
+# Find mid point, then only check either left or right subset
+
 
 def find_missing(arr):
     for i in range(len(arr)):
         if arr[i] != i:
             return i
+
+
+def find_missing_improved(arr):
+    mid_point = len(arr) // 2
+    if arr[mid_point] == mid_point:
+        for i in range(mid_point + 1, len(arr)):
+            if arr[i] != i:
+                return i
+    else:
+        for i in range(mid_point + 1):
+            if arr[i] != i:
+                return i
 
 
 print(find_missing([0, 1, 2, 3, 4, 6, 7]))

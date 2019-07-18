@@ -8,6 +8,8 @@
 # What is the big O of your code?
 # --------------------------------------------------------------------------
 
+# Sort and iterate, if current is same as last, skip, else add to result
+
 
 def get_unique_elements(arr):
     unique = [''] * len(arr)
