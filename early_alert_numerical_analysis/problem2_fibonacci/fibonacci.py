@@ -33,7 +33,7 @@ for i in range(n_numbers):
         print(i, end=' ')
 
 # Generate plot for starting digit distribution
-plt.title('Starting Digit Distribution in Fibonacci Sequence')
+plt.title('Starting Digit Distribution in Fibonacci Sequence of {} numbers'.format(n_numbers))
 plt.xlabel("Digits")
 plt.ylabel("Frequency")
 plt.scatter(x=list(range(10)), y=starting_digits, s=10)
@@ -41,7 +41,7 @@ plt.savefig('fibonacci_{}_start.png'.format(n_numbers))
 plt.close()
 
 # Generate plot for ending digit distribution
-plt.title('Ending Digit Distribution in Fibonacci Sequence')
+plt.title('Ending Digit Distribution in Fibonacci Sequence of {} numbers'.format(n_numbers))
 plt.xlabel("Digits")
 plt.ylabel("Frequency")
 plt.scatter(x=list(range(10)), y=ending_digits, s=10)
